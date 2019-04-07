@@ -1,0 +1,90 @@
+body a{
+	text-decoration: none;
+}
+
+.cursoitem{
+	width: 300px;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 2px solid #CCC;
+	border-radius: 10px;
+	text-align: center;
+}
+.cursoinfo{
+	height: 15vh;
+	background-color: #DDD;
+}
+
+.cursoinfo img{
+	float: left;
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.cursoinfo h3{
+	margin: 0;
+	padding-top: 10px;
+
+}
+.navbar{
+	margin-bottom: 0px;
+	height: 10vh;
+}
+@media (min-width: 768px){
+	.navbar {
+	     border-radius: 0px;
+	}
+}
+
+
+.curso_left {
+    width: 20%;
+    min-height: 300px;
+    float: left;
+    overflow-y: scroll;
+    background: #CCC;
+    height: 75vh;
+}
+
+.curso_right {
+    overflow-y: scroll;
+    min-height: 300px;
+    float: right;
+    width: 80%;
+    height: 75vh;
+}
+.modulos{
+	background-color: #BBB;
+}
+.modulos p{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+	background-color: #BBB;
+
+}
+
+.aula p{
+	height: 40px;
+	line-height: 40px;
+	margin-left: 40px;
+	background-color: #CCC;
+
+}
+
+.aula p:hover{
+	background: #BBB;
+}
+.aula:hover{
+	background: #BBB;
+}
+nav .navbar{
+	height: 10vh!important;
+}
+
+.form-duvida textarea{
+	width: 100%;
+	height: 70%;
+}
