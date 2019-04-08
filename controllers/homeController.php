@@ -5,14 +5,17 @@ class homeController extends controller {
 		parent::__construct();
 		$alunos = new Alunos();
 
+		$_SESSION['lgaluno'] = 1;
+
 		if ($alunos->isLogged()) {
 			header("Location:".BASE."login");
 		}
+
 	}
 
 	public function index() {
 		$alunos = new Alunos();
-		
+
 		if ($alunos->isLogged()) {
 			header("Location:".BASE."login");
 		}
