@@ -15,6 +15,8 @@ class homeController extends controller {
 			'info' => array()
 		);
 
+		$this->debug($_SESSION,1);
+
 		$alunos = new Alunos();
 		$alunos->setAluno($_SESSION['lgaluno']);
 		$dados['info'] = $alunos;
