@@ -2,9 +2,9 @@
 <head>
 	<title>Meu site</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE; ?>assets/css/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE; ?>assets/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo BASE; ?>assets/css/template.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_STATIC; ?>assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_STATIC; ?>assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_STATIC; ?>assets/css/template.css" />
 	 <!-- Compiled and minified CSS 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -34,8 +34,8 @@
 
 	<?php $this->loadViewInTemplate($viewName, $viewData); ?>
 
-	<script type="text/javascript" src="<?php echo BASE; ?>assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php echo BASE; ?>assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="<?php echo BASE; ?>assets/js/script.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_STATIC; ?>assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_STATIC; ?>assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_STATIC; ?>assets/js/script.js"></script>
 </body>
 </html>

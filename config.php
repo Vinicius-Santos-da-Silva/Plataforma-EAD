@@ -7,6 +7,7 @@ $config = array();
 
 //define("BASE" , "http://localhost/ead/" );
 define("BASE" , "http://ec2-3-16-89-162.us-east-2.compute.amazonaws.com/ead/index.php/" );
+define("BASE_STATIC" , "http://ec2-3-16-89-162.us-east-2.compute.amazonaws.com/ead/" );
 
 global $config;
 
