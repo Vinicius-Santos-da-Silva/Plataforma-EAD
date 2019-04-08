@@ -5,7 +5,9 @@ require 'environment.php';
 $config = array();
 
 
-define("BASE" , "http://localhost/ead/" );
+//define("BASE" , "http://localhost/ead/" );
+define("BASE" , "http://ec2-3-16-89-162.us-east-2.compute.amazonaws.com/ead/" );
+
 global $config;
 
 if(ENVIRONMENT == 'development') {
@@ -18,7 +20,7 @@ if(ENVIRONMENT == 'development') {
 	$config['dbname'] = 'iMBtHlzbHI';
 	$config['host'] = 'remotemysql.com';
 	$config['dbuser'] = 'iMBtHlzbHI';
-	$config['dbpass'] = 'hzPgSdODai';
+	$config['dbpass'] = '$hzPgSdODai';
 } else {
 	#define("BASE" , "http://localhost/ead/" );
 	$config['dbname'] = 'ead';
