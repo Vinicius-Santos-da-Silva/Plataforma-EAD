@@ -20,7 +20,7 @@ if(ENVIRONMENT == 'development') {
 	$config['dbname'] = 'iMBtHlzbHI';
 	$config['host'] = 'remotemysql.com';
 	$config['dbuser'] = 'iMBtHlzbHI';
-	$config['dbpass'] = '$hzPgSdODai';
+	$config['dbpass'] = 'hzPgSdODai';
 } else {
 	#define("BASE" , "http://localhost/ead/" );
 	$config['dbname'] = 'ead';
