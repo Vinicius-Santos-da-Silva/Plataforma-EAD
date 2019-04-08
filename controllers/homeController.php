@@ -5,7 +5,7 @@ class homeController extends controller {
 		parent::__construct();
 		$alunos = new Alunos();
 
-		if (!$alunos->isLogged()) {
+		if ($alunos->isLogged()) {
 			header("Location:".BASE."login");
 		}
 	}
@@ -15,7 +15,7 @@ class homeController extends controller {
 			'info' => array()
 		);
 
-		$this->debug($_SESSION);
+		//$this->debug($_SESSION);
 
 		$alunos = new Alunos();
 		$alunos->setAluno($_SESSION['lgaluno']);
