@@ -11,13 +11,19 @@ class homeController extends controller {
 	}
 
 	public function index() {
+		$alunos = new Alunos();
+		
+		if ($alunos->isLogged()) {
+			header("Location:".BASE."login");
+		}
+
 		$dados = array(
 			'info' => array()
 		);
 
 		//$this->debug($_SESSION);
 
-		$alunos = new Alunos();
+		
 		$alunos->setAluno($_SESSION['lgaluno']);
 		$dados['info'] = $alunos;
 		
