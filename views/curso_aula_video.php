@@ -1,4 +1,4 @@
-<?php #print_r($viewData);PHP_EOL; ?>
+<?php #print_r($viewData['aula']);PHP_EOL; ?>
 
 <div class="cursoinfo">
 
@@ -33,6 +33,11 @@
 	<h3> Video - <?php echo $viewData['aula']['nome']; ?></h3>
 	
 	<iframe width="100%" height="80%px" src="<?php echo $viewData['aula']['url'] ?>" frameborder="0" allowfullscreen></iframe>
+	<?php if($viewData['aula']['assistido']): ?>
+		Esta aula já foi assitida
+	<?php else: ?>
+		<button type='button' onclick="marcarAssistido(this)" data-id="<?php echo $viewData['aula']['id'] ?>">Marca como Assistido</button>
+	<?php endif; ?>
 	<p><?php echo $viewData['aula']['descricao']; ?></p>
 	<h5>Duvidas? Envia sua pergunta!</h5>
 	<form method="POST" class="form-duvida">

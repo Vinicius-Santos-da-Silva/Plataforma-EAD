@@ -7,6 +7,12 @@ class Aulas extends model{
 	public function __construct(){
 		parent::__construct();
 	}
+
+	public function marcarAssistido($id){
+		$aluno = $_SESSION['lgaluno'];
+		$sql = "INSERT INTO historico SET data_viewed = NOW() , id_aluno = '$aluno' , id_aula = '$id'";
+		$this->db->query($sql);
+	}
 	
 	public function getAulasDoModulo($id){
 		$array = array();
@@ -51,9 +57,19 @@ class Aulas extends model{
 
 	public function getAula($id_aula){
 		$array = array();
-
-		$sql = "SELECT * FROM aulas WHERE id = '$id_aula'";
+		$aluno = $_SESSION['lgaluno'];
+		$sql = "
+		SELECT 
+			tipo,
+			(select count(*) from historico where historico.id_aula = aulas.id and historico.id_aluno = '$aluno') as assistido
+		FROM 
+			aulas 
+		WHERE 
+			id = '$id_aula'";
 		$sql = $this->db->query($sql);
+
+		//$this->debug($sql->fetch(),1);
+
 
 		if ($sql->rowCount() > 0) {
 			$row = $sql->fetch();
@@ -74,6 +90,9 @@ class Aulas extends model{
 				$array['tipo'] = 'poll';
 				//$this->debug($array,1);
 			}
+			//$this->debug($row,1);
+
+			$array['assistido'] = $row['assistido'];
 
 		}
 

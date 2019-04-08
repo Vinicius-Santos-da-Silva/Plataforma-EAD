@@ -11,3 +11,15 @@ function updateArea() {
 $(function(){
 	$('textarea').empty();
 })
+
+function marcarAssistido(obj){
+	let id = $(obj).attr('data-id');
+	console.log(id)
+
+	obj.remove();
+
+	$.ajax({
+		url: '/ead/ajax/marcarAssistido/'+id,
+		type: 'GET'
+	});
+}
