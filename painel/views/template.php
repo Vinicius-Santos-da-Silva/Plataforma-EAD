@@ -24,7 +24,6 @@
 				<li><a href="<?php echo BASE; ?>anuncios">Meus Anúncios</a></li>
 				<li><a href="<?php echo BASE; ?>login/sair">Sair</a></li>
 				<?php else: ?>
-					<li><a href="<?php echo BASE; ?>cadastrar">Cadastre-se</a></li>
 					<li><a href="<?php echo BASE; ?>login">Login</a></li>
 					<li><a href="<?php echo BASE; ?>login/logout">Sair</a></li>
 				<?php endif; ?>

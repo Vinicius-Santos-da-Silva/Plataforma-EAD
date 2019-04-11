@@ -5,7 +5,7 @@ class cursosController extends controller {
 		parent::__construct();
 		$alunos = new Alunos();
 
-		if ($alunos->isLogged()) {
+		if (!$alunos->isLogged()) {
 			header("Location:".BASE."login");
 		}
 	}

@@ -4,12 +4,10 @@ require 'environment.php';
 
 $config = array();
 global $config;
-
-define("BASE" , "http://localhost/ead/" );
-
+define("BASE" , "http://localhost/ead/painel/" );
 
 if(ENVIRONMENT == 'development') {
-	define("BASE" , "http://localhost/ead/" );
+	//define("BASE" , "http://localhost/ead/painel/" );
 	
 	$config['dbname'] = 'ead';
 	$config['host'] = 'localhost';
@@ -18,7 +16,7 @@ if(ENVIRONMENT == 'development') {
 
 	
 } else {
-	#define("BASE" , "http://ec2-3-16-89-162.us-east-2.compute.amazonaws.com/ead/index.php/" );
+	//define("BASE" , "http://ec2-3-16-89-162.us-east-2.compute.amazonaws.com/ead/painel/index.php/" );
 	$config['dbname'] = 'iMBtHlzbHI';
 	$config['host'] = 'remotemysql.com';
 	$config['dbuser'] = 'iMBtHlzbHI';

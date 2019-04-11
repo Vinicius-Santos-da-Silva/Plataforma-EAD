@@ -1,7 +1,7 @@
 
 <div class="cursoinfo">
 
-	<img src="<?php echo BASE;  ?>assets/images/cursos/<?php echo $curso->getImagem();  ?>" border="0" height="60">
+	<img src="<?php echo $curso->getImagem();  ?>" border="0" height="60">
 
 	<h3> <?php echo $curso->getNome(); ?> </h3>
 	<?php echo $curso->getDescricao(); ?>

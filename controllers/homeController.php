@@ -5,9 +5,7 @@ class homeController extends controller {
 		parent::__construct();
 		$alunos = new Alunos();
 
-		$_SESSION['lgaluno'] = 1;
-
-		if ($alunos->isLogged()) {
+		if (!$alunos->isLogged()) {
 			header("Location:".BASE."login");
 		}
 
@@ -16,9 +14,6 @@ class homeController extends controller {
 	public function index() {
 		$alunos = new Alunos();
 
-		if ($alunos->isLogged()) {
-			header("Location:".BASE."login");
-		}
 
 		$dados = array(
 			'info' => array()
